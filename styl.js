@@ -55,8 +55,8 @@ class Style {
     const rew = this.rework;
 
     return rew
-      .consume(imprt({path: this.path, transform: whitespace}))
-      .consume(() => {
+      .use(imprt({path: this.path, transform: whitespace}))
+      .use(() => {
         let data;
         try {
           rew.use(variant());
